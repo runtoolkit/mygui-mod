@@ -53,7 +53,7 @@ public class MyCustomScreen extends Screen {
         );
         inputField.setMaxLength(64);
         inputField.setPlaceholder(Text.literal("Buraya yaz...").withColor(0x666688));
-        this.addSelectableChild(inputField);
+        this.addDrawableChild(inputField);
 
         // --- Buton 1: Gönder ---
         this.addDrawableChild(ButtonWidget.builder(
@@ -134,8 +134,8 @@ public class MyCustomScreen extends Screen {
             COLOR_LABEL
         );
 
-        // --- Text field render ---
-        inputField.render(context, mouseX, mouseY, delta);
+        // --- Widgetları çiz ---
+        super.render(context, mouseX, mouseY, delta);
 
         // --- Log alanı ---
         int logY = y + 130;
@@ -148,9 +148,6 @@ public class MyCustomScreen extends Screen {
                 0xFF88FFAA
             );
         }
-
-        // --- Widgetları çiz ---
-        super.render(context, mouseX, mouseY, delta);
     }
 
     @Override
