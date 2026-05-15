@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "mygui",
+  "version": "1.0.0",
+  "name": "My GUI Mod",
+  "description": "Custom GUI mod for Minecraft 1.21.2",
+  "authors": ["Legends11"],
+  "environment": "client",
+  "entrypoints": {
+    "main": ["com.example.mygui.MyGuiMod"],
+    "client": ["com.example.mygui.client.MyGuiModClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric-api": "*",
+    "minecraft": "~1.21.2"
+  }
+}
